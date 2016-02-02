@@ -69,9 +69,10 @@ class Map:
                       for x in range(width)]
 
         self.init_fov_and_pathfinding()
-        self.player_start_pos = (0, height / 2)
+        self.player_start_pos = (0, height // 2)
 
     def init_fov_and_pathfinding(self):
+        print("initting fov and pathfinding")
         # init fov
         self.fov_map = tcod.map_new(self.width, self.height)
         self.update_fov_map()
@@ -127,7 +128,7 @@ class Map:
             object.x -= 1
             if object.x < 0:
                 object.dead = True
-        game.purge_dead_objects()
+        #game.purge_dead_objects()
 
         self.tiles.pop(0)
         # generate new map column

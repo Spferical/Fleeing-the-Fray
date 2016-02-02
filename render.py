@@ -144,7 +144,7 @@ def render_right_panel():
     # show player's stats
     # blit to root console
     tcod.console_blit(
-        right_panel, 0, 0, RIGHT_PANEL_WIDTH, SCREEN_HEIGHT, 0, CAMERA_WIDTH, 0)
+        right_panel, 0, 0, RIGHT_PANEL_WIDTH, SCREEN_HEIGHT, 0, int(CAMERA_WIDTH), 0)
 
 
 def draw_tile(x, y):
@@ -196,15 +196,15 @@ def clear_tile(x, y):
 
 def clear_all_tiles():
     # draw each tile in map
-    for x in xrange(terrain.map.width):
-        for y in xrange(terrain.map.height):
+    for x in range(terrain.map.width):
+        for y in range(terrain.map.height):
             clear_tile(x, y)
 
 
 def draw_all_tiles():
     # draw each tile in map
-    for x in xrange(terrain.map.width):
-        for y in xrange(terrain.map.height):
+    for x in range(terrain.map.width):
+        for y in range(terrain.map.height):
             draw_tile(x, y)
 
 
@@ -263,7 +263,7 @@ def render_bar(panel, x, y, total_width, name, value, maximum, bar_color,
         tcod.console_rect(panel, x, y, bar_width, 1, False, tcod.BKGND_SET)
     # finally, some centered text with the values
     tcod.console_set_default_foreground(panel, tcod.white)
-    tcod.console_print_ex(panel, x + total_width / 2, y, tcod.BKGND_NONE,
+    tcod.console_print_ex(panel, x + total_width // 2, y, tcod.BKGND_NONE,
                           tcod.CENTER, name + ': ' + str(value) +
                           '/' + str(maximum))
 

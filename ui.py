@@ -74,8 +74,8 @@ def menu(header, options, width, highlighted=[]):
         y = index + header_height
         tcod.console_rect(window, 0, y, w, 1, False, flag=tcod.BKGND_SET)
     # blit the contents of "window" to the root console
-    x = SCREEN_WIDTH / 2 - width / 2
-    y = SCREEN_HEIGHT / 2 - height / 2
+    x = SCREEN_WIDTH // 2 - width // 2
+    y = SCREEN_HEIGHT // 2 - height // 2
     tcod.console_blit(window, 0, 0, width, height, 0, x, y, 1.0, 0.7)
     # present the root console to the player and wait for a key-press
     tcod.console_flush()
@@ -122,8 +122,8 @@ def pick_direction():
     tcod.console_set_default_foreground(window, tcod.white)
     text = 'Pick a direction.'
     tcod.console_print_rect(window, 0, 0, w, h, text)
-    x = SCREEN_WIDTH / 2 - w / 2
-    y = SCREEN_HEIGHT / 2 - h / 2
+    x = SCREEN_WIDTH // 2 - w // 2
+    y = SCREEN_HEIGHT // 2 - h // 2
     tcod.console_blit(window, 0, 0, w, h, 0, x, y, 1.0, 0.7)
     tcod.console_flush()
     global key
@@ -141,7 +141,7 @@ def pick_direction():
 
 
 def handle_main_menu():
-    img = tcod.image_load('menu_background.png')
+    img = tcod.image_load(b'menu_background.png')
 
     while not tcod.console_is_window_closed():
         # show the background image, at twice the regular console resolution
@@ -149,9 +149,9 @@ def handle_main_menu():
 
         # show the game's title, and some credits!
         tcod.console_set_default_foreground(0, tcod.white)
-        tcod.console_print_ex(0, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 4,
+        tcod.console_print_ex(0, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 4,
                               tcod.BKGND_NONE, tcod.CENTER, 'Fleeing the Fray')
-        tcod.console_print_ex(0, SCREEN_WIDTH / 2, SCREEN_HEIGHT - 2,
+        tcod.console_print_ex(0, SCREEN_WIDTH // 2, SCREEN_HEIGHT - 2,
                               tcod.BKGND_NONE, tcod.CENTER,
                               'By Spferical (Spferical@gmail.com)')
 

@@ -81,6 +81,7 @@ def handle_keys():  # controls
     if action == 'moved':
         if player.x > terrain.map.width / 2:
             terrain.map.scroll()
+            purge_dead_objects()
         # player moved, so we should recompute the fov map
         # terrain.map.init_fov_and_pathfinding()
         # terrain.map.update_fov_map()
