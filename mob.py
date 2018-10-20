@@ -1,5 +1,5 @@
 from gobject import Object
-import libtcodpy as tcod
+import tcod
 import math
 import ai
 import ui

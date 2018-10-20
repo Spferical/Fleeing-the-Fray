@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 import mob
 import random
 from config import DIAGONAL_MOVEMENT, TORCH_RADIUS

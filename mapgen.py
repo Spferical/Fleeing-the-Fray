@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 import mob
 import random
 from config import ROOM_MIN_SIZE, ROOM_MAX_SIZE, MAX_ROOMS, \

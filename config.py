@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 
 MAX_FPS = 20
 

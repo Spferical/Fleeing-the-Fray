@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import libtcodpy as tcod
+import tcod
 import ui
 from config import SCREEN_WIDTH, SCREEN_HEIGHT, MAX_FPS
 

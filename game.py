@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 from config import TORCH_RADIUS, FOV_LIGHT_WALLS, FOV_ALGO, \
     DIAGONAL_MOVEMENT, VICTORY_DISTANCE
 import render

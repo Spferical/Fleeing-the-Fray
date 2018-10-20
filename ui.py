@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 from config import INVENTORY_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH
 import render
 import textwrap

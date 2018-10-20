@@ -3,7 +3,7 @@ Stores game map and classes like Tile, Map, etc.
 The levels are set in game.py, generated in mapgen.py.
 This file is imported by anything that needs to access the game's levels.
 """
-import libtcodpy as tcod
+import tcod
 from config import DIAGONAL_MOVEMENT, MAP_WIDTH, MAP_HEIGHT
 import mapgen
 import game

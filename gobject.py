@@ -1,4 +1,4 @@
-import libtcodpy as tcod
+import tcod
 from config import DIAGONAL_MOVEMENT
 
 
