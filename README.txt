@@ -12,8 +12,9 @@ http://doryen.eptalys.net/libtcod
 
 TO RUN:
     Windows users can run Flee.exe
-    Linux users should have python installed, and can run main.py
-    (unfortunately, the game does not run in WINE for me - but you can try...)
+    Linux users can run:
+        pip install --user tcod
+        python main.py
     OSX users can install Python and run main.py or run BootCamp or whatever
 
 MENUS:
